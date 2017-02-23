@@ -1,4 +1,5 @@
 package com.facturacion.gt.orm;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -9,12 +10,11 @@ import java.sql.Timestamp;
 /**
  * Created by Ramiro on 22/02/2017.
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name="cliente")
-public class Cliente {
+@XmlRootElement(name="proveedor")
+public class Proveedor {
     @XmlElement
-    private BigInteger cod_cliente;
+    private BigInteger cod_proveedor;
     @XmlElement
     private BigInteger telefono;
     @XmlElement
@@ -45,13 +45,6 @@ public class Cliente {
     private String usuario_modifica;
 
 
-    public BigInteger getCod_cliente() {
-        return cod_cliente;
-    }
-
-    public void setCod_cliente(BigInteger cod_cliente) {
-        this.cod_cliente = cod_cliente;
-    }
 
     public BigInteger getTelefono() {
         return telefono;
@@ -163,5 +156,13 @@ public class Cliente {
 
     public void setUsuario_modifica(String usuario_modifica) {
         this.usuario_modifica = usuario_modifica;
+    }
+
+    public BigInteger getCod_proveedor() {
+        return cod_proveedor;
+    }
+
+    public void setCod_proveedor(BigInteger cod_proveedor) {
+        this.cod_proveedor = cod_proveedor;
     }
 }
